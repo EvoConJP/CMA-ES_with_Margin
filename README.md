@@ -18,7 +18,7 @@ The integer variable $x_0$ is obtained by rounding the continuous variable sampl
 Please see `sample_script.py`.
 
 <details>
-<summary>Details</summary>
+<summary>Details (click to expand)</summary>
 
 ### Setting the objective function
 Set the objective function, the number of dimensions, and the maximum number of evaluations. As an example, the SphereOneMax function is set here.
