@@ -35,11 +35,11 @@ Set the search space for discrete variables. If the elements of the discrete var
 ```
 import numpy as np
 
-int_space = np.full((3, 4), np.nan)
-int_space[0, :2] = np.array([1, 2])
-int_space[1, :3] = np.array([1, 2, 3])
-int_space[2, :4] = np.array([1, 2, 3, 4])
-# int_space
+discrete_space = np.full((3, 4), np.nan)
+discrete_space[0, :2] = np.array([1, 2])
+discrete_space[1, :3] = np.array([1, 2, 3])
+discrete_space[2, :4] = np.array([1, 2, 3, 4])
+# discrete_space
 # [[  1.   2.  nan  nan]
 #  [  1.   2.   3.  nan]
 #  [  1.   2.   3.   4.]]
