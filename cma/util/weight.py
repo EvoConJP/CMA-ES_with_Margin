@@ -120,8 +120,9 @@ class QuantileBasedWeight(object):
 
 
 class CMAWeight(object):
-    def __init__(self, lam, min_problem=True):
+    def __init__(self, lam, dim=None, min_problem=True):
         self.lam = lam
+        self.dim = dim
         self.min_problem = min_problem
         self.w = np.maximum(np.log((self.lam + 1.)/2.) - np.log(np.arange(self.lam)+1.), np.zeros(self.lam))
         self.w = self.w / self.w.sum() if self.w.sum() != 0 else self.w
