@@ -17,6 +17,9 @@ The dashed ellipse represents the confidence ellipse of the multivariate normal 
 
 Please see `sample_script.py`.
 
+<details>
+<summary>Details</summary>
+
 ### Setting the objective function
 Set the objective function, the number of dimensions, and the maximum number of evaluations. As an example, the SphereOneMax function is set here.
 ```
@@ -81,6 +84,8 @@ opt = cma.CMAESwM(dim, discrete_space, w_func, samp,
 # run
 result = opt.run(samp, logger=output, verbose=True)
 ```
+
+</details>
 
 ## References and related papers
 1. Ryoki Hamano, Shota Saito, Masahiro Nomura, and Shinichi Shirakawa, CMA-ES with Margin: Lower-Bounding Marginal Probability for Mixed-Integer Black-Box Optimization, In Genetic and Evolutionary Computation Conference (GECCO ’22), July 9–13, 2022, Boston, MA, USA. ACM, New York, NY, USA, 9 pages. https://doi.org/10.1145/3512290.3528827
