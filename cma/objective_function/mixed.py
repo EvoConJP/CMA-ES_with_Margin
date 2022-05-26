@@ -212,32 +212,3 @@ class EllipsoidInt(ObjectiveFunction):
         evals = (tmp**2).sum(axis=1)
         self._update_best_eval(evals)
         return evals
-
-class twoDRosenbrock(ObjectiveFunction):
-    """
-    Rosenbrock function: :math:`f(x) = (1-x_0)^2 + 2(x_1 - x_0^2)^2, x_0 \in Z, x_1 \in R`
-    """
-    minimization_problem = True
-
-    def __init__(self, d, ind, bid, ratio=None, target_eval=1e-10, max_eval=1e4):
-        super(twoDRosenbrock, self).__init__(target_eval, max_eval)
-        if ratio is None:
-            ratio = 1.
-        self.d = 2
-        self.ind = 1
-        self.bid = 0
-        self.r = ratio
-
-    def __call__(self, X):
-        """
-        :param X: candidate solutions
-        :type X: array_like, shape=(lam, d), dtype=float
-        :return: evaluation values
-        :rtype: array_like, shape=(lam), dtype=float
-        """
-        self.eval_count += len(X)
-        S = np.array(X)[:,0]
-        B = np.round(np.array(X)[:,1])
-        evals = 2 * (S - B ** 2) ** 2 + (B - 1) ** 2
-        self._update_best_eval(evals)
-        return evals
