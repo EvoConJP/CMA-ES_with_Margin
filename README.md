@@ -31,7 +31,7 @@ f = eval('f_mixed.' + func)(d=dim, bid=dim_bi, ind=0, max_eval=max_evals)
 ```
 
 ### Setting the discrete space
-Set the search space for discrete variables. If the elements of the discrete variable are different in each dimension, align the number of array elements by filling the tail with `nan`. For example, a three-dimensional discrete variable `[[1, 2], [1, 2, 3], [1, 2, 3, 4]]` is set as follows:
+Set the search space for discrete variables. If the number of the elements of the discrete variable is different in each dimension, align the number of array elements by filling the tail with `nan`. For example, a three-dimensional discrete variable `[[1, 2], [1, 2, 3], [1, 2, 3, 4]]` is set as follows:
 ```
 import numpy as np
 
