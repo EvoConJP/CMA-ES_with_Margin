@@ -11,7 +11,7 @@ $$ f(x) = x_0^2 + x_1^2 \text{ , where } x_0 \in \mathbb{R}, x_1 \in \mathbb{Z} 
 |---|---|
 |![CMA-ES](fig/CMA-ES.gif)|![CMA-ESwM](fig/CMA-ESwM.gif)|
 
-The integer variable $x_0$ is obtained by rounding the continuous variable sampled from the multivariate normal distribution. The dashed ellipse represents the confidence ellipse of the multivariate normal distribution. The red star indicates the optimal solution position. The CMA-ES may not change the evaluation value because of the plateau caused by the discretization. On the other hand, the CMA-ESwM prevents this stagnation by keeping the probability of being sampled outside a plateau above a certain level.
+The integer variable $x_1$ is obtained by rounding the continuous variable sampled from the multivariate normal distribution. The dashed ellipse represents the confidence ellipse of the multivariate normal distribution. The red star indicates the optimal solution position. The CMA-ES may not change the evaluation value because of the plateau caused by the discretization. On the other hand, the CMA-ESwM prevents this stagnation by keeping the probability of being sampled outside a plateau above a certain level.
 
 ## Usage
 
