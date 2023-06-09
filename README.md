@@ -5,6 +5,7 @@ CMA-ES with Margin (CMA-ESwM) [1] is a CMA-ES variant proposed for mixed-integer
 ## Demonstration
 
 Here we show optimizing SphereInt function with CMA-ES and CMA-ESwM. The SphereInt function is given as follows (This is a minimization problem).
+
 $$ f(x) = x_0^2 + x_1^2 \text{ , where } x_0 \in \mathbb{R}, x_1 \in \mathbb{Z} \text{.} $$
 
 |CMA-ES|CMA-ESwM|
