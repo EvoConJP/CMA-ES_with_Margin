@@ -39,7 +39,7 @@ class CMAParam(object):
 
     @staticmethod
     def c_mu(dim, mueff, c1=0., alpha_mu=2.):
-        return np.minimum(1. - c1, alpha_mu * (mueff - 2. + 1./mueff) / ((dim + 2.)**2 + alpha_mu * mueff / 2.))
+        return np.minimum(1. - c1, alpha_mu * (0.25 + mueff - 2. + 1./mueff) / ((dim + 2.)**2 + alpha_mu * mueff / 2.))
 
     @staticmethod
     def c_c(dim, mueff):
